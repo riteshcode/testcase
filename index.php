@@ -59,3 +59,85 @@ for ($i=0; $i < $n; $i++) {
     }
     echo '<br>';
 }
+echo '<br/>';
+
+
+for ($i=0; $i < $n; $i++) { 
+
+    for ($j=0; $j < $n_1; $j++) {
+        $to_show = $j+2;
+        $end_j = ($to_show >= ($n_1-1) )?$n_1-1:$to_show;
+        echo 'end_j: '.$end_j.'<br>';
+        for ($k=$j; $k <= $end_j; $k++) { 
+            for ($l=$j; $l <= $end_j ; $l++) { 
+                // echo 'lk='.$l.''.$k.'';
+                echo $arr[$k][$k].'&nbsp;';
+            }
+        }
+        echo '<br>';
+        if($end_j == ($n_1-1)){         // check all digit print than exit from j loop
+            break;
+        }
+        
+    }
+    echo '<br>';
+
+    // breaking digit to view in three matrics format
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+1 1 1  1 1 0  1 0 0  0 0 0  
+0 1 0  1 0 0  0 0 0  0 0 0  
+1 1 1  1 1 0  1 0 0  0 0 0  
+0 0 2  0 2 4  2 4 4  4 4 0  
+0 0 0  0 0 2  0 2 0  2 0 0  
+0 0 1  0 1 2  1 2 4  2 4 0  
+
+this format code
+
+for ($i=0; $i < $n; $i++) { 
+
+    for ($j=0; $j < $n_1; $j++) {
+        $to_show = $j+2;
+        $end_j = ($to_show >= ($n_1-1) )?$n_1-1:$to_show;
+     
+        for ($k=$j; $k <= $end_j; $k++) { 
+            echo $arr[$i][$k].'&nbsp;';
+        }
+        echo '&nbsp;';
+        if($end_j == ($n_1-1)){         // check all digit print than exit from j loop
+            break;
+        }
+        
+    }
+    echo '<br>';
+
+    // breaking digit to view in three matrics format
+
+    
+}
+
+
+
+
+
+
+*/
+
+
+
